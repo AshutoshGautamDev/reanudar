@@ -101,7 +101,7 @@ const Profile = () => {
   ];
 
   const skills = {
-    frontend: "React, Javascript, HTML, CSS, Storybook, Tailwind CSS",
+    frontend: "React, Javascript, HTML, CSS, SCSS, Storybook, Tailwind CSS",
     backend: "Nodejs, Express, JAVA, MongoDB, MySql",
     versionControl: "Git, GitHub, Bitbucket",
     tools: "Visual Studio code",
