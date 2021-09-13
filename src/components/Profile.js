@@ -22,7 +22,7 @@ const Profile = () => {
     name: "Ashutosh Gautam",
     place: "Madhya Pradesh",
     country: "India",
-    position: "Solution Engineer",
+    position: "Software Engineer",
     detail:
       "Enthusiastic Software developer eager to contribute to the team success by smart work, attention to detail and excellent organisational skills .Thorough understanding of technologies like React , Nodejs, Java. Motivated to learn ,grow and excel in industry.",
   };
