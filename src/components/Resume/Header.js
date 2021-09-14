@@ -55,7 +55,7 @@ const Header = () => {
             class="modal z-10 h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg"
             onClick={() => setShowModal(!showModal)}
           >
-            <div class="bg-white rounded shadow-lg w-10/12 md:w-1/3">
+            <div class="bg-white rounded shadow-lg w-10/12 md:w-1/3 ">
               <div class="border-b px-4 py-2 flex justify-between items-center">
                 <h3 class="font-semibold text-lg">Select !!</h3>
                 <button
@@ -65,7 +65,7 @@ const Header = () => {
                   X
                 </button>
               </div>
-              <div class="px-3 py-16">
+              <div class="px-3 py-16 backdrop-filter backdrop-blur-lg">
                 <div class="flex flex-col items-left text-base justify-center">
                   {links.map(({ name, redirect }) => {
                     return <Link class="ml-4 mr-5 mb-4 shadow-lg">{name}</Link>;
