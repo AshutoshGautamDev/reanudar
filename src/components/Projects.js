@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "./Heading";
 import { Download, Github } from "./icons";
 const Projects = () => {
   const projects = [
@@ -47,15 +48,7 @@ const Projects = () => {
   return (
     <section class="text-gray-600 body-font overflow-hidden">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-20">
-          <h2 class="text-xs text-blue-500 tracking-widest font-medium title-font mb-1">
-            My work at glance
-          </h2>
-          <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-            Projects
-          </h1>
-        </div>
-
+        <Heading head={'Projects'} subHead={'My work at glance'}/>
         <div class="flex flex-wrap -m-12">
           {projects.map(
             ({ techStack, title, name, detail, githubLink, dlink }) => (

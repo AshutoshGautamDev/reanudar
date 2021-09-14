@@ -7,15 +7,16 @@ import IndexPage from "./components/IndexPage";
 import Profile from "./components/Profile";
 import Footer from "./components/Resume/Footer";
 import Header from "./components/Resume/Header";
-import MainLayout from "./components/Resume/MainLayout";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 
 function App() {
   return (
     <Router>
-      <IndexPage/>
+      <Header/>
       <Profile/>
+      <Experience/>
       <Skills/>
       <Education/>
       <Projects/>
