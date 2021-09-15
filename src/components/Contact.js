@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { send } from "emailjs-com";
+import Notification from "./Notification";
 
 const Contact = () => {
   const [toSend, setToSend] = useState({
@@ -8,8 +9,9 @@ const Contact = () => {
     message: "",
     reply_to: "",
   });
-
+  const [error, setError] = useState("");
   const handleChange = (e) => {
+    setError("");
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
@@ -19,18 +21,19 @@ const Contact = () => {
       toSend.message === "" ||
       toSend.reply_to === ""
     ) {
-      alert("Plese enter all details");
+      setError("Plese enter all details");
+      return;
     }
-    
+
     let validRegex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (!toSend.reply_to.match(validRegex)) {
-      alert("please enter valid email id");
+      setError("please enter valid email id");
       return;
     }
 
     if (toSend.message.length < 50) {
-      alert("Enter message with at least 50 character");
+      setError("Enter message with at least 50 character");
       return;
     }
 
@@ -61,6 +64,7 @@ const Contact = () => {
             Feel free to contact
           </p>
         </div>
+        {error && <Notification message={error} onClose={() => setError("")} />}
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
             <div class="p-2 w-1/2">
@@ -112,12 +116,12 @@ const Contact = () => {
                 onClick={onSubmit}
                 class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg"
               >
-                Button
+                Send
               </button>
             </div>
             <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
               <a href="aashutoshgautam2611@gmail.com" class="text-blue-500">
-                example@email.com
+                aashutoshgautam2611@gmail.com
               </a>
               <p class="leading-normal my-5">
                 Indore
