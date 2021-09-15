@@ -8,6 +8,7 @@ import tailwind from "../assets/img/icons/tailwindcss-logo.svg";
 import storybook from "../assets/img/icons/storybook-logo.svg";
 import express from "../assets/img/icons/expressjs-logo.svg";
 import graph from "../assets/img/icons/graphql-logo.svg";
+import { Element } from "react-scroll";
 
 const skills = [
   {
@@ -99,23 +100,25 @@ const SkillCardRight = ({ logo, title, details }) => {
 const Skills = () => {
   return (
     <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-20">
-          <h2 class="text-xs text-blue-500 tracking-widest font-medium title-font mb-1">
-            What I know
-          </h2>
-          <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">
-            Skills
-          </h1>
+      <Element name="to-skills">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h2 class="text-xs text-blue-500 tracking-widest font-medium title-font mb-1">
+              What I know
+            </h2>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">
+              Skills
+            </h1>
+          </div>
+          {skills.map((data, index) => {
+            return index % 2 === 0 ? (
+              <SkillCardLeft {...data} />
+            ) : (
+              <SkillCardRight {...data} />
+            );
+          })}
         </div>
-        {skills.map((data, index) => {
-          return index % 2 === 0 ? (
-            <SkillCardLeft {...data} />
-          ) : (
-            <SkillCardRight {...data} />
-          );
-        })}
-      </div>
+      </Element>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import EducationCard from "./Card/EducationCard";
+import { Element } from "react-scroll";
 
 const Education = () => {
   const educations = [
@@ -27,17 +28,21 @@ const Education = () => {
   ];
 
   return (
-    <section class="text-gray-600 body-font m-2 md:mx-4 py-4">
-      <h1 className='sm:text-3xl text-2xl font-medium text-center title-font text-gray-900'>Education</h1>
-      {educations.map((education) => (
-        <EducationCard
-          title={education.course}
-          institution={education.institute}
-          period={`${education.from} - ${education.to}`}
-          percentage={education.percentage}
-        />
-      ))}
-    </section>
+    <Element name="to-education">
+      <section class="text-gray-600 body-font m-2 md:mx-4 py-4">
+        <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900">
+          Education
+        </h1>
+        {educations.map((education) => (
+          <EducationCard
+            title={education.course}
+            institution={education.institute}
+            period={`${education.from} - ${education.to}`}
+            percentage={education.percentage}
+          />
+        ))}
+      </section>
+    </Element>
   );
 };
 

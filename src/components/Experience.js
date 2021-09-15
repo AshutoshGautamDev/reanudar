@@ -1,6 +1,7 @@
 import React from "react";
 import ExperienceCard from "./Card/ExperienceCard";
 import Heading from "./Heading";
+import { Element } from "react-scroll";
 
 const Experience = () => {
   const experience = [
@@ -30,14 +31,16 @@ const Experience = () => {
   ];
 
   return (
-    <section class="text-gray-600 body-font overflow-hidden">
-      <div class="container px-5 pt-12 mx-auto">
-        <Heading head={"Experience"} subHead={"Where I worked"} />
-        {experience.map((detail) => {
-          return <ExperienceCard {...detail} />;
-        })}
-      </div>
-    </section>
+    <Element name="to-experience">
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 pt-12 mx-auto">
+          <Heading head={"Experience"} subHead={"Where I worked"} />
+          {experience.map((detail) => {
+            return <ExperienceCard {...detail} />;
+          })}
+        </div>
+      </section>
+    </Element>
   );
 };
 

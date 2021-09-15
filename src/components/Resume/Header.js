@@ -1,25 +1,33 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Download, Logo, RightArrow } from "../icons";
+import { Logo, RightArrow } from "../icons";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
   const links = [
     {
-      name: "About Me",
-      redirect: "/",
+      name: "Home",
+      redirect: "to-home",
     },
     {
-      name: "Resume",
-      redirect: "/",
+      name: "Experience",
+      redirect: "to-experience",
+    },
+    {
+      name: "Skills",
+      redirect: "to-skills",
+    },
+    {
+      name: "Education",
+      redirect: "to-education",
     },
     {
       name: "Projects",
-      redirect: "/",
+      redirect: "to-projects",
     },
     {
       name: "Contact",
-      redirect: "/",
+      redirect: "to-contact",
     },
   ];
 
@@ -27,19 +35,37 @@ const Header = () => {
     <header class=" text-gray-600 body-font top-0 fixed z-10 w-full backdrop-filter backdrop-blur-lg">
       <div className="hidden md:block">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <span class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <Logo />
             <span class="ml-3 text-xl">Ashutosh Gautam /</span>
             <span class="font-light ml-2"> Software Developer</span>
-          </a>
+          </span>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
             {links.map(({ name, redirect }) => {
-              return <Link class="mr-5 hover:text-gray-900 text-black">{name}</Link>;
+              return (
+                <Link
+                  to={redirect}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  className="mr-5 hover:text-gray-900 text-black cursor-pointer"
+                >
+                  {name}
+                </Link>
+              );
             })}
           </nav>
-          <button class="inline-flex items-center bg-blue-100 text-black border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-            Resume
-          </button>
+          <a
+            href={
+              "https://drive.google.com/file/d/1fd0FsxvmrcVMM9AV83GD4sDu9gakKmft/view?usp=sharing"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button class="inline-flex items-center bg-blue-100 text-black border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+              Resume
+            </button>
+          </a>
         </div>
       </div>
       <div className="block md:hidden">
@@ -68,7 +94,18 @@ const Header = () => {
               <div class="px-3 py-16 backdrop-filter backdrop-blur-lg">
                 <div class="flex flex-col items-left text-base justify-center">
                   {links.map(({ name, redirect }) => {
-                    return <Link class="ml-4 mr-5 mb-4 shadow-lg">{name}</Link>;
+                    return (
+                      <Link
+                        to={redirect}
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        className="ml-4 mr-5 mb-4 shadow-lg"
+                        onClick={() => setShowModal(!showModal)}
+                      >
+                        {name}
+                      </Link>
+                    );
                   })}
                 </div>
               </div>
