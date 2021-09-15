@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/img/icons/nodejs-logo.svg";
 import avatar from "../assets/img/profile.jpeg";
 
 const Button = ({ text, icon }) => {
@@ -153,7 +152,7 @@ const Profile = () => {
                     <img
                       alt="..."
                       src={avatar}
-                      className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-20 mr-8 -ml-24 lg:-ml-16"
+                      className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-20 mr-8 -ml-24 lg:-ml-24"
                       style={{ maxWidth: "200px" }}
                     />
                   </div>
@@ -164,26 +163,6 @@ const Profile = () => {
                   </div>
                 </div>
                 <div className="w-full lg:w-4/12 px-4 lg:order-1">
-                  <div className="flex justify-center py-4 lg:pt-4 pt-8">
-                    <div className="mr-4 p-3 text-center">
-                      <span className="text-xl font-bold block uppercase tracking-wide text-gray-700">
-                        22
-                      </span>
-                      <span className="text-sm text-gray-500">Friends</span>
-                    </div>
-                    <div className="mr-4 p-3 text-center">
-                      <span className="text-xl font-bold block uppercase tracking-wide text-gray-700">
-                        10
-                      </span>
-                      <span className="text-sm text-gray-500">Photos</span>
-                    </div>
-                    <div className="lg:mr-4 p-3 text-center">
-                      <span className="text-xl font-bold block uppercase tracking-wide text-gray-700">
-                        89
-                      </span>
-                      <span className="text-sm text-gray-500">Comments</span>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="text-center mt-12">
