@@ -122,7 +122,7 @@ const Contact = () => {
               </button>
             </div>
             <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-              <a href="aashutoshgautam2611@gmail.com" class="text-blue-500">
+              <a href="mailto:aashutoshgautam2611@gmail.com" class="text-blue-500">
                 aashutoshgautam2611@gmail.com
               </a>
               <p class="leading-normal my-5">
