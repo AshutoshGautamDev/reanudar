@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import avatar from "../assets/img/profile.jpeg";
 import { Element } from "react-scroll";
 import { Github, Linkedin } from "./icons";
+import banner from "../assets/img/banner.jpg";
 
 const Button = ({ text, icon }) => {
   return (
@@ -24,7 +25,7 @@ const Profile = () => {
     name: "Ashutosh Gautam",
     place: "Madhya Pradesh",
     country: "India",
-    position: "Software Engineer",
+    position: "Software Developer",
     detail:
       "Enthusiastic Software developer eager to contribute to the team success by smart work, attention to detail and excellent organisational skills .Thorough understanding of technologies like React , Nodejs, Java. Motivated to learn ,grow and excel in industry.",
   };
@@ -41,18 +42,12 @@ const Profile = () => {
     <main className="profile-page">
       <Element name="to-home">
         <section className="relative block" style={{ height: "500px" }}>
-          <div
+          <img
             className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
-            }}
+            src={banner}
+            alt=""
           >
-            <span
-              id="blackOverlay"
-              className="w-full h-full absolute opacity-50 bg-black"
-            ></span>
-          </div>
+          </img>
           <div
             className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
             style={{ height: "70px" }}
@@ -67,13 +62,13 @@ const Profile = () => {
               y="0"
             >
               <polygon
-                className="text-blue-200 fill-current"
+                className="text-blue-100 fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
           </div>
         </section>
-        <section className="relative py-16 bg-blue-200">
+        <section className="relative py-16 bg-blue-100">
           <div className="container mx-auto px-4">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
               <div className="px-6">
