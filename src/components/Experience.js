@@ -1,5 +1,5 @@
 import React from "react";
-import ExperienceCard from "./Card/ExperienceCard";
+import ExperienceCard from "./Cards/ExperienceCard";
 import Heading from "./Heading";
 import { Element } from "react-scroll";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import EducationCard from "./Card/EducationCard";
+import EducationCard from "./Cards/EducationCard";
 import { Element } from "react-scroll";
 
 const Education = () => {

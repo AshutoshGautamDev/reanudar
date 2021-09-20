@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Logo, RightArrow } from "../icons";
+import { Logo, RightArrow } from "../Icons";
 import { Link } from "react-scroll";
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
+  const [scrollStat, setScrollStat] = useState(false);
   const links = [
     {
       name: "Home",
@@ -31,8 +32,16 @@ const Header = () => {
     },
   ];
 
+  window.addEventListener("scroll", (e) => {
+    setScrollStat(true);
+  });
+
   return (
-    <header class=" text-gray-600 body-font top-0 fixed z-10 w-full backdrop-filter backdrop-blur-lg">
+    <header
+      class={`text-gray-600 body-font top-0 fixed z-10 w-full backdrop-filter backdrop-blur-lg ${
+        scrollStat ? "shadow-2xl" : ""
+      }`}
+    >
       <div className="hidden md:block">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <span class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">

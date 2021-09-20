@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "./Heading";
-import { Download, Github } from "./icons";
+import { Download, Github } from "./Icons";
 import { Element } from "react-scroll";
 
 const Projects = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import avatar from "../assets/img/profile.jpeg";
 import { Element } from "react-scroll";
-import { Github, Linkedin } from "./icons";
+import { Download, Github, Linkedin, Polygon } from "./Icons";
 import banner from "../assets/img/banner.jpg";
 
 const Button = ({ text, icon }) => {
@@ -46,26 +46,12 @@ const Profile = () => {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             src={banner}
             alt=""
-          >
-          </img>
+          ></img>
           <div
             className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
             style={{ height: "70px" }}
           >
-            <svg
-              className="absolute bottom-0 overflow-hidden"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              version="1.1"
-              viewBox="0 0 2560 100"
-              x="0"
-              y="0"
-            >
-              <polygon
-                className="text-blue-100 fill-current"
-                points="2560 0 2560 100 0 100"
-              ></polygon>
-            </svg>
+            <Polygon />
           </div>
         </section>
         <section className="relative py-16 bg-blue-100">
@@ -136,22 +122,7 @@ const Profile = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Button
-                        text={"Resume"}
-                        icon={
-                          <svg
-                            fill="currentColor"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="0"
-                            class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M15 10h4l-7 8-7-8h4v-10h6v10zm3.213-8.246l-1.213 1.599c2.984 1.732 5 4.955 5 8.647 0 5.514-4.486 10-10 10s-10-4.486-10-10c0-3.692 2.016-6.915 5-8.647l-1.213-1.599c-3.465 2.103-5.787 5.897-5.787 10.246 0 6.627 5.373 12 12 12s12-5.373 12-12c0-4.349-2.322-8.143-5.787-10.246z" />
-                          </svg>
-                        }
-                      />
+                      <Button text={"Resume"} icon={<Download />} />
                     </a>
                     <a
                       href={common.linkedin}

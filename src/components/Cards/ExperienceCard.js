@@ -1,5 +1,5 @@
 import React from "react";
-import { RightArrow } from "../icons";
+import { RightArrow } from "../Icons";
 
 const ExperienceCard = ({ company, position, from, to, place, details }) => {
   return (
