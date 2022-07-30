@@ -5,11 +5,25 @@ import { Element } from "react-scroll";
 
 const Experience = () => {
   const experience = [
+{
+      company: "Get My Parking",
+      position: "Software Development Engineer I",
+      from: "Jan-2022",
+      to: "Present",
+      place: "Bangalore",
+      details: [
+        "Worked on many white-labelled web-apps for the tenants.”,
+        "Worked on building rich data-driven web applications by consuming RESTful services and APIs.”, 
+	      "Worked collaboratively with backend developers, product managers, and UX designers to enhance the user interface and accessibility.", 
+        "Design, code, verify, test, document, amend and refactor high- quality web applications with scalability, performance, and stability and reduced the build size by 68%.", 
+        "Worked on web performances of web apps and reduced the load time of the web by 46% and increased the web performance from 67% to 81% (measured by lighthouse)",
+      ],
+    },
     {
       company: "Gammastack",
       position: "Solution Engineer",
       from: "Feb-2021",
-      to: "Present",
+      to: "Jan-2022",
       place: "Indore",
       details: [
         "Identified web-based use interaction and developed highly-responsive user interface components via React.",
