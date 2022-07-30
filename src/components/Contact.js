@@ -126,9 +126,9 @@ const Contact = () => {
                 aashutoshgautam2611@gmail.com
               </a>
               <p class="leading-normal my-5">
-                Indore
+                Bangalore
                 <br />
-                Madhya Pradesh, India 456010
+                Karnataka, India 560087
               </p>
             </div>
           </div>
