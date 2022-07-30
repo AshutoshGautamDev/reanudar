@@ -9,7 +9,7 @@ const Education = () => {
       course: "Bachelore of technology",
       from: "2017",
       to: "2021",
-      percentage: "8.37 / 10",
+      percentage: "8.15 / 10",
     },
     {
       institute: "Lok Mahavidyalaya",
