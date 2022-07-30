@@ -23,7 +23,7 @@ const Button = ({ text, icon }) => {
 const Profile = () => {
   const profile = {
     name: "Ashutosh Gautam",
-    place: "Madhya Pradesh",
+    place: "Bangalore, KA",
     country: "India",
     position: "Software Developer",
     detail:
@@ -34,7 +34,7 @@ const Profile = () => {
     github: "https://github.com/AshutoshGautamDev",
     linkedin: "https://www.linkedin.com/in/ashutosh-gautam-0907b7148/",
     resume:
-      "https://drive.google.com/file/d/1fd0FsxvmrcVMM9AV83GD4sDu9gakKmft/view?usp=sharing",
+      "https://drive.google.com/file/d/1nfGW8QqctPiWpSO2Xxgsvx1lWhCbpEoz/view?usp=sharing",
     twitter: "https://twitter.com/hypertext_troop",
   };
 
